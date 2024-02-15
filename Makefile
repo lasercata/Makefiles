@@ -2,7 +2,7 @@
 #
 # Author      : Lasercata
 # Last update : 2024.02.15
-# Version     : v1.0.0
+# Version     : v1.0.1
 #
 #=============================
 
@@ -105,10 +105,12 @@ $(INCL_DIR):
 $(BIN_DIR):
 	@echo ====== Creating $(BIN_DIR) directory ======
 	@mkdir -p $(BIN_DIR)
+	@echo "*" > $(BIN_DIR)/.gitignore
 
 $(BUILD_DIR):
 	@echo ====== Creating $(BUILD_DIR) directory ======
 	@mkdir -p $(BUILD_DIR)
+	@echo "*" > $(BUILD_DIR)/.gitignore
 # }}}2
 
 # ------ Clean ------{{{2
