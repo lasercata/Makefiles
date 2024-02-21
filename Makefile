@@ -1,8 +1,8 @@
 #=============================
 #
 # Author      : Lasercata
-# Last update : 2024.02.15
-# Version     : v1.0.1
+# Last update : 2024.02.21
+# Version     : v1.0.2
 #
 #=============================
 
@@ -59,6 +59,14 @@ $(BIN_DIR)/$(TARGET): $(BUILD_DIR)/$(TARGET).o $(OBJ_LST)
 
 # ------ Objects ------
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c $(INCL_DIR)/%.h
+	@echo ====== Compiling $@ ======
+	$(CC) \
+		$(CFLAGS) $(debug_or_prod_flags) \
+		-c \
+		$< \
+		-o $@
+
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	@echo ====== Compiling $@ ======
 	$(CC) \
 		$(CFLAGS) $(debug_or_prod_flags) \
