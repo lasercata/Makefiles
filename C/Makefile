@@ -4,6 +4,8 @@
 # Last update : 2024.02.21
 # Version     : v1.0.2
 #
+# This is a C makefile.
+#
 #=============================
 
 # ====== Target ======{{{1
@@ -134,7 +136,7 @@ clean-obj:
 # ------ Clean bin ------
 .PHONY: clean-bin
 clean-bin:
-	@echo ====== Cleaning bin/ ======
+	@echo ====== Cleaning $(BIN_DIR)/ ======
 	rm -f $(BIN_DIR)/*
 # }}}2
 # }}}1
