@@ -10,10 +10,15 @@ The file structure used for this the following one :
 ├── src/
 └── Makefile
 ```
-You can use `make dirs` to create this structure.
+You can use `make dirs` to create this structure (it will create a `.gitignore` file in the `bin/` and `build/` directories).
 
 The sources files (`*.c`) should be put in the `src/` folder.
+
 The headers (`*.h` files) should be put in the `include/` folder.
+
+The `build/` folder will contain the compiled `*.o` objects.
+
+The `bin/` folder will contain the final executable.
 
 ## Usage
 ### Edit the target
