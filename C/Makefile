@@ -1,8 +1,8 @@
 #=============================
 #
 # Author      : Lasercata
-# Last update : 2024.02.21
-# Version     : v1.0.2
+# Last update : 2024.03.11
+# Version     : v1.0.3
 #
 # This is a C makefile.
 #
@@ -52,7 +52,7 @@ debug: dirs $(BIN_DIR)/$(TARGET)
 # }}}2
 
 # ------ Target ------{{{2
-$(BIN_DIR)/$(TARGET): $(BUILD_DIR)/$(TARGET).o $(OBJ_LST)
+$(BIN_DIR)/%: $(BUILD_DIR)/%.o $(OBJ_LST)
 	@echo ====== Linking $@ ======
 	$(CC) \
 		$^ \
@@ -131,7 +131,8 @@ clean: clean-obj clean-bin
 .PHONY: clean-obj
 clean-obj:
 	@echo ====== Cleaning *.o ======
-	rm -f $(OBJ_LST)
+	# rm -f $(OBJ_LST)
+	rm -f $(BUILD_DIR)/*
 
 # ------ Clean bin ------
 .PHONY: clean-bin
