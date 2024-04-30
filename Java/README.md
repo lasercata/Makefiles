@@ -4,15 +4,18 @@ This is a generic Java makefile.
 ## Project structure
 The file structure used for this the following one :
 ```
+├── bin/
 ├── classes/
 ├── src/
 └── Makefile
 ```
-You can use `make dirs` to create this structure (it will create a `.gitignore` file in the `classes/` directory).
+You can use `make dirs` to create this structure (it will create a `.gitignore` file in the `classes/` and `bin/` directories).
 
 The sources files (`*.java`) should be put in the `src/` folder.
 
 The `classes/` directory will contain the compiled classes.
+
+The `bin/` directory will contain the `.jar` file, if created.
 
 ## Usage
 ### Edit the target
@@ -22,6 +25,8 @@ Change the variable `MAIN` to the name of the main class. This is only used to r
 Then run `make` to build the project.
 
 This will compile the `*.java` files into corresponding `*.class` files, and put them in the folder `classes/`.
+
+To create a `jar` archive, run `make jar`.
 
 ### Run
 To run (without arguments) : `make run`. This will run the main class.
