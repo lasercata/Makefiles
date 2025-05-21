@@ -1,4 +1,4 @@
-# C Makefile
+# LaTeX Makefile
 This is a generic LaTeX makefile.
 
 ## Project structure
